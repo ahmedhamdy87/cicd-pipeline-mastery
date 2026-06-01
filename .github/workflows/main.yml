@@ -17,4 +17,4 @@ jobs:
         uses: actions/checkout@v6.0.2
 
       - name: listing 
-        run: ls -l
+        run: ls -la
