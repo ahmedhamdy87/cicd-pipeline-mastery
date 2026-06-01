@@ -1,0 +1,25 @@
+on: 
+  puah:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+      - '.github/workflows/**'
+      - '.gitignore'
+      - 'Dockerfile'
+      - 'docker-compose.yml'
+      - 'docker-compose.override.yml'
+  jobs:
+    checkout-code:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v6.0.2
+  
+   test-code:
+     runs-on: ubuntu-latest
+     steps:
+       - name: Test code
+         run: |
+           echo "Testing the code"
+           npm test
