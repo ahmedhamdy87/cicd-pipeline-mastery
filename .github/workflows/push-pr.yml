@@ -25,10 +25,13 @@ jobs:
       - name: Checkout code for testing
         uses: actions/checkout@v4     
 
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
       - name: Install Dependencies
-        run: npm install              
+        run: bun install
 
       - name: Test code
         run: |
           echo "Testing the code"
-          npm test
+          bun test

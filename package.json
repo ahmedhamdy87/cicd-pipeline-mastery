@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "start": "bun run src/index.js",
-    "dev": "bun --watch src/index.js"
+    "dev": "bun --watch src/index.js",
+    "test": "bun test"
   },
   "devDependencies": {
     "@types/bun": "latest"
